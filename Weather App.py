@@ -42,7 +42,7 @@ def get_weather(city):
         wind = json["wind"]["speed"]
         visibility = json["visibility"]
 
-        # Convert sunrise and sunset times to local time
+        #Convert sunrise and sunset times to local time
         sunrise_time_local = datetime.utcfromtimestamp(sunrise + timezone).strftime("%I:%M %p")
         sunset_time_local = datetime.utcfromtimestamp(sunset + timezone).strftime("%I:%M %p")
 
@@ -201,7 +201,7 @@ f6.grid(row=1, column=3, pady=(0, 0))
 
 #Frame for Humidity
 humidphoto = PhotoImage(file="Humidity - transparent.png")
-humidphoto = humidphoto.subsample(2)  # Adjust the subsample factor as needed
+humidphoto = humidphoto.subsample(2) 
 humid_label = Label(f1, image=humidphoto, bg=rightbg_color)
 humid_label.grid(row=0, column=0, sticky="nsew")
 
@@ -210,7 +210,7 @@ city_humidity.grid(row=1, column=0, sticky="nsew")
 
 #Frame for Sunrise
 risephoto = PhotoImage(file="Sunrise - transparent.png")
-risephoto = risephoto.subsample(2)  # Adjust the subsample factor as needed
+risephoto = risephoto.subsample(2)  
 rise_label = Label(f2, image=risephoto, bg=rightbg_color)
 rise_label.grid(row=0, column=0, sticky="nsew")
 
@@ -219,7 +219,7 @@ city_sunrise.grid(row=1, column=0, sticky="nsew")
 
 #Frame for Sunset
 setphoto = PhotoImage(file="Sunset - transparent.png")
-setphoto = setphoto.subsample(2)  # Adjust the subsample factor as needed
+setphoto = setphoto.subsample(2) 
 set_label = Label(f3, image=setphoto, bg=rightbg_color)
 set_label.grid(row=0, column=0, sticky="nsew")
 
@@ -228,7 +228,7 @@ city_sunset.grid(row=1, column=0, sticky="nsew")
 
 #Frame for Rain
 rainphoto = PhotoImage(file="Rain - transparent.png")
-rainphoto = rainphoto.subsample(2)  # Adjust the subsample factor as needed
+rainphoto = rainphoto.subsample(2) 
 rain_label = Label(f4, image=rainphoto, bg=rightbg_color)
 rain_label.grid(row=0, column=0, sticky="nsew")
 
@@ -237,7 +237,7 @@ city_rain.grid(row=1, column=0, sticky="nsew")
 
 #Frame for Wind
 windphoto = PhotoImage(file="Wind - transparent.png")
-windphoto = windphoto.subsample(2)  # Adjust the subsample factor as needed
+windphoto = windphoto.subsample(2)  
 wind_label = Label(f5, image=windphoto, bg=rightbg_color)
 wind_label.grid(row=0, column=0, sticky="nsew")
 
@@ -246,7 +246,7 @@ city_wind.grid(row=1, column=0, sticky="nsew")
 
 #Frame for Visibility
 visibilityphoto = PhotoImage(file="Visibility - transparent.png")
-visibilityphoto = visibilityphoto.subsample(2)  # Adjust the subsample factor as needed
+visibilityphoto = visibilityphoto.subsample(2)  
 visibility_label = Label(f6, image=visibilityphoto, bg=rightbg_color)
 visibility_label.grid(row=0, column=0, sticky="nsew")
 
